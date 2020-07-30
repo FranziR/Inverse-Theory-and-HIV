@@ -1,0 +1,25 @@
+\section{Data}
+\label{sec:Data}
+
+Whenever a patient starts a new drug treatment, the efficiency of the medication is assessed during a 3 months lasting preparatory phase.
+Here, the patient is exposed to the drug in such a way that the doctor can artificially control the inhibition parameter $\gamma(t)$.
+The load of viruses $V_{obs}(t)$, given in $cells/ml$, is measured in the blood plasma in a 2-weeks interval.
+Note, that one wants to make as few blood plasma tests as possible since they are not only time consuming and expensive but also an additional physical and psychological burden for the patient.\\
+From a mathematical point of view, it is $\mathbf{d_{obs}} \in \mathbb{R}^6$ with $d_{obs,i} = V_{obs}(t_i), i = [1,6]$.
+Further, determining the exact amount of virus from blood plasma is not a trivial measurement.
+The smallest variations in the sampled plasma volume or too long periods between plasma sampling and final analysis during which viruses can inhibit, are only two factors that potentially contaminate the data with errors.
+In addition hereto, other aspects such as errors introduced by the laboratory tools, further reduce the reliability of the measurements.
+Combining this with the fact, that the viral load can not be negative, allows to formulate the prior knowledge in terms of the following probability distribution:
+
+\begin{align*}
+p(\mathbf{d}_{obs}|\mathbf{m}) =
+    \begin{cases}
+        0 & \text{ if $V_{obs}(t_i) < 0, i = 1,...,6$}\\
+        const\cdot e^{-\frac{1}{2}(\tilde{V}-V_{obs})^T C_{D}^{-1}(\tilde{V}-V_{obs})} & \text{else}
+    \end{cases}
+\end{align*}
+
+As soon as one of the measurements is negative the probability density of the observation is set to 0.
+Apart from this mutual dependency between the measurements, it is generally assumed that the observations are independently and identically distributed.
+This is expressed by the \textit{data covariance matrix} $C_D$ whose only non-zero entries are the variances of each measurement $V_{obs}(t_i)$ on its diagonal (i.e. covariances between two measurements is 0).
+It is assumed, that the standard deviation in each measurement is $\sigma_D = 250$.
