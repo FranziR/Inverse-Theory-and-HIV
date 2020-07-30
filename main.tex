@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage[shortlabels]{enumitem}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{ntheorem}
+\usepackage[toc,page]{appendix}
+\usepackage{geometry}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{wrapfig}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{DarkGray}{rgb}{0.75,0.75,0.75}
+\newcolumntype{g}{>{\columncolor{Gray}}c}
+\usepackage{multirow}
+\usepackage{sidecap}
+\geometry{a4paper, left=20mm, top=20mm, right = 20mm}
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage[font={small}]{caption}
+\usepackage{subcaption}
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
+\usepackage{minted}
+\usepackage{url}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.5em}
+\usepackage{multicol}
+
+\begin{document}
+
+\noindent
+\textbf{Franziska Riegger} \hfill \textbf{April 15, 2020}\\[0.1cm]
+\normalsize ETHZ 19-904-580 \hfill Final Assignment\\
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+% \center % Center everything on the page
+ \begin{center}
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+% \textsc{\LARGE University of Utrecht}\\[1.5cm] % Name of your university/college
+% \textsc{\Large Parallel Algorithms - Assignment 1}\\[0.5cm] % Major heading such as course name
+% \textsc{\large Assignment 1}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+\textsc{\Huge Inverse Theory}\\[0.25cm]
+\textsc{\Large Optimized HIV drug treatment using probabilistic inversion}
+\\[0.2cm] % Title of your document
+\HRule \\[1.0cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+% \Large \emph{Author:}\\
+% Franziska \textsc{Riegger} (TU Delft - 4958950)\\[1.0cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+% {\large October 17, 2018}\\[1.0cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+% \includegraphics[width=0.2\textwidth]{images/logo-mastermath.jpeg}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+% \input{Abstract.tex}
+% \vfill % Fill the rest of the page with whitespace
+% \end{titlepage}
+
+\end{center}
+
+\input{chapter/Abstract.tex}
+\input{chapter/Chapter1.tex}
+\input{chapter/Chapter2.tex}
+\input{chapter/Chapter3.tex}
+\input{chapter/Chapter4.tex}
+\input{chapter/Chapter5.tex}
+\newpage
+\bibliographystyle{abbrv} 
+\bibliography{chapter/References.bib}
+\newpage
+
+
+\end{document}
