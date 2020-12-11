@@ -1,0 +1,87 @@
+\section*{Table of Content}
+\subsection*{Proposal 1}
+
+\begin{enumerate}[font=\bfseries]
+    \item \textbf{Introduction}
+    \item \textbf{The Dynamic HIV Model}
+    \begin{itemize}[font=\small]
+        \item \textit{(short) Model review}: Linear/nonlinear; Different models simulate different interactions, 
+        cell popultaions, virus developments (e. g. resistance) etc.
+        \item \textit{Model requirements}: What should our model be capable of simulating?
+        \item \textit{Model definition/selection}: Introduce a modified version of the model in \cite{wu2010game}; 
+        Which modifications and why?; Introduce all parameters (biological meaning + reference values \cite{adams2005hiv} + units) and state 
+        which have to be estimated from patient's data \cite{callaway2002hiv}
+    \end{itemize}
+    \item \textbf{The Clinical Data}
+    \begin{itemize}[font=\small]
+        \item \textit{Numerical simulation}: Predefine a set of true parameters, including initial drug dosages; Interprete a set of numerical results as a sequence of blood 
+        tests (e.g. every other day within the first 8 weeks)
+    \end{itemize}
+    \item \textbf{The Methods to Personalize the Model}
+    \begin{enumerate}[font=\bfseries]
+        \item \textbf{Probabilistic Formulation of Prior Knowledge and Bayes' Theorem}
+        \begin{itemize}[font=\small]
+            \item \textit{Prior Knowledge in Data Space}: clinical data suffers from measurement errors (e.g. environment of blood tests can 
+            not accurately be reconstructed, different time intervals elapsed between blood test and evaluation, uncertainties in instruments 
+            used to evaluate viral load etc.); blood tests are independent samples; cells counts can only be positive and change fast in the 
+            first weeks of the treatment
+            \item \textit{Prior Knowledge in Data Space}: Any biological contraints on parameters? Is there a reference value and how strong
+            are the expected deviations from it?
+            \item \textit{Bayes' Theorem}
+        \end{itemize}
+        \item \textbf{Sampling with Markov Chain Monte Carlo Method}
+        \begin{itemize}[font=\small]
+            \item \textit{Implementation Details}
+        \end{itemize}
+    \end{enumerate}
+    \item \textbf{Results and Discussion}
+    \item \textbf{Summary and Outlook}
+    \begin{itemize}[font=\small]
+        \item \textit{Outlook}: this personalized dynamic model can be used to solve an optimal control problem to find ideal drug dosages
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Proposal 2}
+More comprehensive alternative: the focus might not only be on the inversion but the additional sections for Optimal Control won't 
+go into detail and only introduce the broad idea
+
+
+\begin{enumerate}[font=\bfseries]
+    \item \textbf{Introduction}
+    \item \textbf{The Model for a Personalized HIV Treatment}
+    \begin{enumerate}[font=\bfseries]
+        \item \textbf{The Dynamic Model}
+        \begin{itemize}[font=\small]
+            \item \textit{see Proposal 1}
+        \end{itemize}
+        \item \textbf{The Optimal Control Problem}
+        \begin{itemize}[font=\small]
+            \item \textit{Control Parameter}: drug dosages
+            \item \textit{Cost function}: define the cost function which has to be maximized in order to minimize the side effects
+        \end{itemize}
+    \end{enumerate}
+    \item \textbf{The Clinical Data}
+    \begin{itemize}[font=\small]
+        \item \textit{see Proposal 1}
+    \end{itemize}
+    \item \textbf{The Methods}
+    \begin{enumerate}[font=\bfseries]
+        \item \textbf{Personalized Model - Bayesian Approach for Parameter Estimation}
+        \begin{itemize}[font=\small]
+            \item \textit{see Methods section of Proposal 1}
+        \end{itemize}
+        \begin{enumerate}[font=\bfseries]
+            \item \textbf{Probabilistic Formulation of Prior Knowledge and Bayes' Theorem}
+            \item \textbf{Sampling with Markov Chain Monte Carlo Methods}
+        \end{enumerate}
+        \item \textbf{Adjusted drug dose - Optimal control}
+        \begin{itemize}[font=\small]
+            \item \textit{Computing optimal controls}: state idea of Pontryagin's Maximum Principle
+        \end{itemize}
+    \end{enumerate}
+    \item \textbf{Results and Discussion}
+    \begin{itemize}[font=\small]
+        \item focus on parameter estimation
+    \end{itemize}
+    \item \textbf{Summary and Outlook}
+\end{enumerate}

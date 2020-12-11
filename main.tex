@@ -34,10 +34,12 @@
 \documentclass[10pt]{article}
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage[table]{xcolor}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{amssymb}
-\usepackage[shortlabels]{enumitem}
+% \usepackage[shortlabels]{enumitem}
+\usepackage{enumitem}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{ntheorem}
 \usepackage[toc,page]{appendix}
@@ -51,6 +53,7 @@
 \newcolumntype{g}{>{\columncolor{Gray}}c}
 \usepackage{multirow}
 \usepackage{sidecap}
+\usepackage{wrapfig}
 \geometry{a4paper, left=20mm, top=20mm, right = 20mm}
 
 \usepackage{listings}
@@ -62,7 +65,7 @@
 \usepackage{subcaption}
 \setlength{\abovedisplayskip}{4pt}
 \setlength{\belowdisplayskip}{4pt}
-\usepackage{minted}
+%\usepackage{minted}
 \usepackage{url}
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0.5em}
@@ -71,8 +74,8 @@
 \begin{document}
 
 \noindent
-\textbf{Franziska Riegger} \hfill \textbf{April 15, 2020}\\[0.1cm]
-\normalsize ETHZ 19-904-580 \hfill Final Assignment\\
+\textbf{Franziska Riegger} \hfill \textbf{August 14, 2020}\\[0.1cm]
+% \normalsize ETHZ 19-904-580 \hfill Final Assignment\\
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
 
 % \center % Center everything on the page
@@ -121,12 +124,15 @@
 
 \end{center}
 
-\input{chapter/Abstract.tex}
+% \input{Outline/Drafts.tex}
+% \input{chapter/Abstract.tex}
 \input{chapter/Chapter1.tex}
 \input{chapter/Chapter2.tex}
-\input{chapter/Chapter3.tex}
-\input{chapter/Chapter4.tex}
-\input{chapter/Chapter5.tex}
+% \input{chapter/Chapter3.tex}
+% \input{chapter/Chapter4.tex}
+% \input{chapter/Chapter5.tex}
+% \input{chapter/Chapter6.tex}
+% \input{chapter/Chapter7.tex}
 \newpage
 \bibliographystyle{abbrv} 
 \bibliography{chapter/References.bib}

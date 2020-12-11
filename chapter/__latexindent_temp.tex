@@ -1,0 +1,86 @@
+\section{Introduction}
+\label{sec:Introduction}
+
+\begin{itemize}
+    \item attantion getter/intro
+    \item Since then, pathogenesis of HIV has been studied and the life cycle of the virus no well-known
+    \item describe it 
+        --> parts of human immune system is based on a network of different cells \dots
+        --> under normal conditions, T helper cells for instance recognize harmful antigenes and activate their companions, 
+            the T killer cells, B cells and marcopharges
+        --> these then finally kill the intruder, create antibodies \dots
+        --> HIV breaks this chain of protection by attacing the CD4+ T helper cells
+    \item knowledge about the infection mechanisms of HIV allows the development of specfic drugs
+    \item meanwhile, several different so-called antiretroviral medications available
+    \item 
+    \item 
+\end{itemize}
+
+\textbf{Replication cycle of HIV virion}
+\begin{itemize}
+    \item for replication, the HIV virion requires a host cell which it abuses to multiple
+    \item HIV can infect a variety of different immune cells, though the most linkely ones are CD4+ T helper cells and macrophages
+    \item the replication cycle startes with the entry of the virion  into its designated host cell
+    \item once entered, the genome encoding RNA of the virion is copied into a complementary DNA by the enzyme reverse transcriptase
+    \item the viral DNA can then be integrated into the host's genome
+    \item the process of transcription is extremly error-prone and the resulting mutations may cause drug resistance
+    \item the integrated viral DNA can lay dormaint during the 
+\end{itemize}
+
+\textbf{Normally working immune system}
+\begin{itemize}
+    \item HIV is a disease which attacs the human immune system
+    \item human immune system is highly complex and comprises from multiple, co-dependent components
+    \item one of these, is the adaptive immune response which again is subdivided into two types
+    \item the cell-mediated immune response is carried out by T cells, while the humoral immune response
+     is controlled by activated B cells and antibodies
+    \item the memory of the adaptive immune response allows a fast and efficient protection from reinfection with the same pathogen
+    \item 
+    \item Helper T cells are arguably the most important cells in adaptive immunity, 
+    as they are required for almost all adaptive immune responses
+    \item ein Bestandteil davon, sind die zellulären Abwehrreaktoin welche beispielsweise 
+    dafür zuständig sind, bösartige Viren 
+    \item die zelluläre Immunreaktion wid von den sogenannten T Helfer Zellen kooridnert 
+\end{itemize}
+
+
+
+From its first occurrence in the early beginning of the 1980s until this very day, \textit{Human Immunodeficiency Viruses}, widely known as HIV, has taken 39 million lives.
+Thanks to enhanced prevention and highly sophisticated medication, the brutality of the pandemic has been remarkably reduced since its peak in 2004.
+Although, nowadays numerous antiretroviral treatment exist, aiming on inhibiting the viruses, patients suffers from strong side effects.
+Optimally, the choice of kind and dose of drug has to be made individually for each patient.
+However, finding the perfect medication by trial and error is cumbersome and painful.\\
+This scientific report is not only concerned with finding a metric to quantify the efficiency of HIV treatments but also develops a systematic approach how to derive this efficiency measure individually for each patient.\\ \\
+% Nevertheless, for a profound understanding of the HIV infection and its antiviral treatment on a long-term scale, further HIV studies are necessary.
+For this, Adames et. al \cite{ADAMS200510} suggest to model the dynamics of the viruses under the effect of an antiretroviral treatment by the following set of non-linear ODEs (\textit{Ordinary Differential Equations}): 
+
+\begin{align}
+    \begin{split}
+        \dot{T} &= \lambda - \rho T - (1 - \gamma(t))kTV\\
+        \dot{T}^{*} &= (1-\gamma(t))kTV-\delta T^{*}\\
+        \dot{V} &= N\delta T^{*}-cV \quad \text{.}
+    \end{split}
+    \label{equ:ODEs}
+\end{align}
+
+Although, HIV has more than one potential target cell\footnote{Target cells are cells that are infected by HIV, mainly the helper T cells such as CD4+ T cells or macrophages.} the above model considers only the population of one, denoted by $T$.
+$T^*$ describe the infected target cells which actively produces free viruses $V$. 
+Further $\lambda$ in $\frac{cells}{day\cdot ml}$ represents the rate at which new $T$ cells are created from sources within the body, $\rho$ in $\frac{1}{day}$ is the death rate of $T$ cells, $k$ in $\frac{ml}{virions\cdot day}$ the rate by which $T$ cells are infected by virus, $\delta$ in $\frac{1}{day}$ is the death rate for infected cells , $N$ the number of new virions produced from each of the infected cells during their lifetime, and finally $c$ in $\frac{1}{day}$ is the clearance rate of free virions. 
+The time-varying parameter $\gamma(t) \in [0,1]$ quantifies the antiviral drug efficacy whose formal definition will not be given here.
+A drug is said to be efficient if all viruses are inhibited, i.e. $\gamma(t) = 1$.
+Only if this is the case, the ODEs \ref{equ:ODEs} can be solved analytically, otherwise numerically.
+In the following, we will assume an imperfect inhibition and denote the numerical solution of the viral load by $\tilde{V}_j \approx V(t_j)$ at time $t_j$ (the considered time period is discretized in $N_t$ time steps).
+Further, Huang et. al claim that if $\gamma(t) > e_c$ for all $t$ the virus will be eventually eradicated.
+Thus, the so-called \textit{efficacy threshold} $e_c$, defined as
+
+\begin{align}
+ e_c = 1-\frac{c\rho}{kN}\lambda
+ \label{equ:e_c}
+\end{align}
+
+can be interpreted as the ability of a patient’s immune system to control viral replication.
+For an optimized drug treatment it is important to know $e_c$ for each patient.
+At the same time, only the viral load $V(t)$ can directly be measured in the blood plasma.
+Hence, $e_c$ can only be retrieved by estimating the model parameters $\mathbf{m} = (c, \rho, k, N, \lambda)$ from the patient's clinical data  \cite{huang2003modeling}.\\
+All in all, estimating the patient specific, discrete model parameter $\mathbf{m}$ is an inverse problem.
+The associated forward problem is given by the set of equations \ref{equ:ODEs} which non-linearly relates the model parameter $\mathbf{m}$ to the observations $V_{obs}$.

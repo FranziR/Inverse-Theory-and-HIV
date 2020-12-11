@@ -1,42 +1,85 @@
 \section{Introduction}
-\label{sec:Introduction}
+\label{sec:intro}
 
-From its first occurrence in the early beginning of the 1980s until this very day, \textit{Human Immunodeficiency Viruses}, widely known as HIV, has taken 39 million lives.
-Thanks to enhanced prevention and highly sophisticated medication, the brutality of the pandemic has been remarkably reduced since its peak in 2004.
-Although, nowadays numerous antiretroviral treatment exist, aiming on inhibiting the viruses, patients suffers from strong side effects.
-Optimally, the choice of kind and dose of drug has to be made individually for each patient.
-However, finding the perfect medication by trial and error is cumbersome and painful.\\
-This scientific report is not only concerned with finding a metric to quantify the efficiency of HIV treatments but also develops a systematic approach how to derive this efficiency measure individually for each patient.\\ \\
-% Nevertheless, for a profound understanding of the HIV infection and its antiviral treatment on a long-term scale, further HIV studies are necessary.
-For this, Adames et. al \cite{ADAMS200510} suggest to model the dynamics of the viruses under the effect of an antiretroviral treatment by the following set of non-linear ODEs (\textit{Ordinary Differential Equations}): 
+From its first occurrence in the early beginning of the 1980s until this very day, 
+\textit{Human Immunodeficiency Viruses}, widely known as HIV, have taken 39 million lives.
+The brutalitiy of the pandemic has motivated scientists all over the world to intensively study the
+pathogenesis and life cycle of the virus.\par
 
-\begin{align}
-    \begin{split}
-        \dot{T} &= \lambda - \rho T - (1 - \gamma(t))kTV\\
-        \dot{T}^{*} &= (1-\gamma(t))kTV-\delta T^{*}\\
-        \dot{V} &= N\delta T^{*}-cV \quad \text{.}
-    \end{split}
-    \label{equ:ODEs}
-\end{align}
+Nowadays, it is well-known that HIV directly affacts the patient’s adaptive immunity.
+Under healthy circumstances, this component of the human immune system fights pathogens by a 
+conglomerate of communicating cells with so-called CD4+ or T helper cells as key players.
+Taking the role of coordinators, they trigger the crucial steps in the immune response which are 
+necesseary to eliminate free virus and already infected cells \cite{alberts2002helper}.\newline
+In this highly sensitive procedure, HIV attacks the body.
+Among other target cells, the virus infects CD4+ T lymphocytes and hence paralyses the control center of the apadtive immune
+system.
+Consequently, the antibody secretion, originally stimulated by the T helper cells as well as the immunity, that is mediated by cells,
+break down \cite{buselmaier2018biologie}.\par
 
-Although, HIV has more than one potential target cell\footnote{Target cells are cells that are infected by HIV, mainly the helper T cells such as CD4+ T cells or macrophages.} the above model considers only the population of one, denoted by $T$.
-$T^*$ describe the infected target cells which actively produces free viruses $V$. 
-Further $\lambda$ in $\frac{cells}{day\cdot ml}$ represents the rate at which new $T$ cells are created from sources within the body, $\rho$ in $\frac{1}{day}$ is the death rate of $T$ cells, $k$ in $\frac{ml}{virions\cdot day}$ the rate by which $T$ cells are infected by virus, $\delta$ in $\frac{1}{day}$ is the death rate for infected cells , $N$ the number of new virions produced from each of the infected cells during their lifetime, and finally $c$ in $\frac{1}{day}$ is the clearance rate of free virions. 
-The time-varying parameter $\gamma(t) \in [0,1]$ quantifies the antiviral drug efficacy whose formal definition will not be given here.
-A drug is said to be efficient if all viruses are inhibited, i.e. $\gamma(t) = 1$.
-Only if this is the case, the ODEs \ref{equ:ODEs} can be solved analytically, otherwise numerically.
-In the following, we will assume an imperfect inhibition and denote the numerical solution of the viral load by $\tilde{V}_j \approx V(t_j)$ at time $t_j$ (the considered time period is discretized in $N_t$ time steps).
-Further, Huang et. al claim that if $\gamma(t) > e_c$ for all $t$ the virus will be eventually eradicated.
-Thus, the so-called \textit{efficacy threshold} $e_c$, defined as
+The course of an untreated HIV infection differs from patient to patient and so do the observable symptomes, 
+if they appear at all.
+More reliable metrics to track the extent and stage of the viremia, are the viral load and CD4+ cell 
+count in the patient's blood.
+After the number of viruses initially exhibits a dramatic increase, causing flu-like symptoms, it stabilizes at some lower level.
+This, mostly several years lasting stage of clinical latency, is mainly free of symptoms.
+In spite of this deceptive silence, the virus remains in the body and continously lowers the CD4+ T-cell count.
+At a certain point, the viral load rises rapidly, reducing the T-cell count to a level at which it cannot provide 
+sufficent protection any more.
+In this stage, defined as \textit{acquired immunodeficiency syndrome} or shorter AIDS, patients suffer more frequentely 
+and more seriously from opportunistic infections and even cancer.
+Finally, one of these secondary infections ends fatally \cite{mittler1998influence}.\par
 
-\begin{align}
- e_c = 1-\frac{c\rho}{kN}\lambda
- \label{equ:e_c}
-\end{align}
+Until the mid-90's, an HIV infected person was most likely doomed to die.
+Relief from this devastating disease first came with the invention of so-called antiretroviral medication.
+These drugs interfere with the continously better understood multistep replicative life cycle of HIV in 
+human CD4+ T cells, aiming on halting or at least slowing it down.
+Patients under \textit{Highly Active Antiretrovial Therapies} (HAARTs) achieve long-lasting viral suppression by 
+combining multiple of such antiretroviral agents.
+Although these treatment strategies are very efficient in reducing morbidity and mortality of an HIV infection, a
+full viral eradication remains elusive \cite{pau2014antiretroviral,simon2006hiv}.
+A final cure is inhibited by two factors.
+Firstly, although the stabilized virus counts even fall below the threshold of detecability of most assays, 
+is has been discovered that low levels of free virus remain in the plasma.
+In addition to this residual viremia, infected memory CD4+ T cells and macrophages as well as dendritic cells that bounded 
+free virus, constitute latent virus reservoirs.
+These, most of the time silent cells, resume to viral reproduction as soon as the host cell is reactivated.
+A trigger herefore, could for instance be an interrupted HAART \cite{ruelas2013integrated,shen2008viral}.\par
 
-can be interpreted as the ability of a patient’s immune system to control viral replication.
-For an optimized drug treatment it is important to know $e_c$ for each patient.
-At the same time, only the viral load $V(t)$ can directly be measured in the blood plasma.
-Hence, $e_c$ can only be retrieved by estimating the model parameters $\mathbf{m} = (c, \rho, k, N, \lambda)$ from the patient's clinical data  \cite{huang2003modeling}.\\
-All in all, estimating the patient specific, discrete model parameter $\mathbf{m}$ is an inverse problem.
-The associated forward problem is given by the set of equations \ref{equ:ODEs} which non-linearly relates the model parameter $\mathbf{m}$ to the observations $V_{obs}$.
+This observation demonstrates an essential drawback of antiretroviral therapies. Deviations from the strict and 
+complex dosing schedule can not only lead to drug resistance mutations but can also cause a viral rebound.
+Thus, a full compliance of the patient - meaning the intake of a daily cocktail of pills for the rest of her or his life - is inevitable.
+In addition hereto, antiretroviral medication also comes along with unpleasant side effects, ranging from low-grade intolerances to 
+life-threatening reactions.
+All in all, such drug toxicities in combination with a lifelong commitment, adherence issues, the high possibility of drug resistance, 
+high costs and life style issues, make it even harder for the patient to fully commit to the treatment and increase the pressure on science
+to further improve the HIV therapies \cite{lu2018haart,pau2014antiretroviral}.\par
+
+Remedy can not only be provided by developing novel pharmaceuticals, but also by correctly using the currently available medicine.
+Due to the diversity of genetic and molecular conditions in different HIV infected patients, an ultimately best therapy does 
+not exist. 
+Wrong combinations of antiretroviral drugs or inappropriate dosing schedules can amplify the side effects and downsides of the current 
+therapeutical standards.
+Hence, instead of prescribing an off-the-shelf therapy, medical treatment should be tailored to each patient individually, taking her or 
+his history and personal characteristics into account \cite{lu2018haart}.\newline
+This idea however, prompts the justified question of how to find the optimal medication.
+Testing different treatments by trial and error is cumbersome and painful.
+Exposing patients to this additional psychological and physical burden is unacceptable.\newline
+A promising alternative to this \textit{in vivo} approach is a systematic \textit{in silicon} methodology.
+Here, the human body is interpreted as a dynamic system and described by mathematical models \cite{rosenberg2007using}.
+The free design parameters of an HIV therapy as well as the characteristics of the considered patient are then encoded by a set of mathematical 
+parameters.
+Applying tools of inverse theory to estimate the latters from clinical data allows to adjust the model to each patient individually.
+The resulting personalized dynamic system is subsequently used to formulate a control problem.
+A cost function quantifies not only the success of a therapy but also its burdens which are controlled by parameters such as drug dosages.
+Minimizing this functional, allows to determine the individually, ideal HIV therapy in a short time.\par
+
+The following chapter aims at introducing a data-driven workflow that determines an individually optimized HIV treatment.
+For this, we define an appropriate HIV model and state the control problem, which both provide the foundation of the methodology.
+Following, the clinical data of a specific patient is simulated by numerically solving the dynamic system.
+The fourth section demonstrates how we exploit this data to personalize the HIV model by using a Bayesian approach in combination with 
+\textit{Markov Chain Monte Carlo} (MCMC) sampling algorithms.
+Techniques to solve the arising optimal control problem are mentioned but not explained in detail.
+Finally, we discuss results, future ideas and potential improvements.\newline
+Note, that although the control problem is an important part of the presented methodology, the main focus of the chapter is on the 
+application of inverse theories.

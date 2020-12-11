@@ -1,0 +1,85 @@
+\begin{thebibliography}{10}
+
+\bibitem{adams2005hiv}
+B.~M. Adams, H.~T. Banks, M.~Davidian, H.-D. Kwon, H.~T. Tran, S.~N. Wynne, and
+  E.~S. Rosenberg.
+\newblock Hiv dynamics: modeling, data analysis, and optimal treatment
+  protocols.
+\newblock {\em Journal of Computational and Applied Mathematics},
+  184(1):10--49, 2005.
+
+\bibitem{alberts2002helper}
+B.~Alberts, A.~Johnson, J.~Lewis, M.~Raff, K.~Roberts, and P.~Walter.
+\newblock Helper t cells and lymphocyte activation.
+\newblock In {\em Molecular Biology of the Cell. 4th edition}. Garland Science,
+  2002.
+
+\bibitem{anderson1998complex}
+R.~M. Anderson.
+\newblock Complex dynamic behaviours in the interaction between parasite
+  populations and the host's immune system.
+\newblock {\em International journal for parasitology}, 28(4):551--566, 1998.
+
+\bibitem{buselmaier2018biologie}
+W.~Buselmaier and J.~Haussig.
+\newblock {\em Biologie f{\"u}r Mediziner}.
+\newblock Springer-Verlag, 2018.
+
+\bibitem{lu2018haart}
+D.-Y. Lu, H.-Y. Wu, N.~S. Yarla, B.~Xu, J.~Ding, and T.-R. Lu.
+\newblock Haart in hiv/aids treatments: future trends.
+\newblock {\em Infectious Disorders-Drug Targets (Formerly Current Drug
+  Targets-Infectious Disorders)}, 18(1):15--22, 2018.
+
+\bibitem{mittler1998influence}
+J.~E. Mittler, B.~Sulzer, A.~U. Neumann, and A.~S. Perelson.
+\newblock Influence of delayed viral production on viral dynamics in hiv-1
+  infected patients.
+\newblock {\em Mathematical biosciences}, 152(2):143--163, 1998.
+
+\bibitem{pau2014antiretroviral}
+A.~K. Pau and J.~M. George.
+\newblock Antiretroviral therapy: current drugs.
+\newblock {\em Infectious Disease Clinics}, 28(3):371--402, 2014.
+
+\bibitem{perelson1993dynamics}
+A.~S. Perelson, D.~E. Kirschner, and R.~De~Boer.
+\newblock Dynamics of hiv infection of cd4+ t cells.
+\newblock {\em Mathematical biosciences}, 114(1):81--125, 1993.
+
+\bibitem{rong2007emergence}
+L.~Rong, Z.~Feng, and A.~S. Perelson.
+\newblock Emergence of hiv-1 drug resistance during antiretroviral treatment.
+\newblock {\em Bulletin of Mathematical Biology}, 69(6):2027--2060, 2007.
+
+\bibitem{rosenberg2007using}
+E.~S. Rosenberg, M.~Davidian, and H.~T. Banks.
+\newblock Using mathematical modeling and control to develop structured
+  treatment interruption strategies for hiv infection.
+\newblock {\em Drug and alcohol dependence}, 88:S41--S51, 2007.
+
+\bibitem{ruelas2013integrated}
+D.~S. Ruelas and W.~C. Greene.
+\newblock An integrated overview of hiv-1 latency.
+\newblock {\em Cell}, 155(3):519--529, 2013.
+
+\bibitem{shen2008viral}
+L.~Shen and R.~F. Siliciano.
+\newblock Viral reservoirs, residual viremia, and the potential of highly
+  active antiretroviral therapy to eradicate hiv infection.
+\newblock {\em Journal of Allergy and Clinical Immunology}, 122(1):22--28,
+  2008.
+
+\bibitem{simon2006hiv}
+V.~Simon, D.~D. Ho, and Q.~A. Karim.
+\newblock Hiv/aids epidemiology, pathogenesis, prevention, and treatment.
+\newblock {\em The Lancet}, 368(9534):489--504, 2006.
+
+\bibitem{wu2010game}
+J.~Wu and M.~Zhang.
+\newblock A game theoretical approach to optimal control of dual drug delivery
+  for hiv infection treatment.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part B
+  (Cybernetics)}, 40(3):694--702, 2010.
+
+\end{thebibliography}
