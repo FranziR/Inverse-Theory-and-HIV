@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.13)  2 JAN 2021 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.13)  4 JAN 2021 14:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -744,27 +744,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
-(/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter1.tex (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-32.def
+(/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter2.tex (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [1
-
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 77--1
-
- []
-
-<images/infection_scheme/untreated_infection.pdf, id=38, 89.33376pt x 68.255pt>
+)
+<images/infection_scheme/untreated_infection.pdf, id=29, 89.33376pt x 68.255pt>
 File: images/infection_scheme/untreated_infection.pdf Graphic file (type pdf)
 <use images/infection_scheme/untreated_infection.pdf>
 Package pdftex.def Info: images/infection_scheme/untreated_infection.pdf  used on input line 25.
 (pdftex.def)             Requested size: 108.8329pt x 83.15744pt.
-<images/infection_scheme/treated_infection.pdf, id=39, 178.6675pt x 97.36375pt>
+<images/infection_scheme/treated_infection.pdf, id=30, 178.6675pt x 97.36375pt>
 File: images/infection_scheme/treated_infection.pdf Graphic file (type pdf)
 <use images/infection_scheme/treated_infection.pdf>
 Package pdftex.def Info: images/infection_scheme/treated_infection.pdf  used on input line 32.
 (pdftex.def)             Requested size: 211.61644pt x 115.32498pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
-(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
@@ -775,67 +769,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--91
 
  []
 
-[2] [3 </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/infection_scheme/untreated_infection.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/infection_scheme/treated_infection.pdf>] [4]
-<images/eRT_0_alpha_0/untreated_T.pdf, id=93, 462.52798pt x 346.89601pt>
+[1
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/infection_scheme/untreated_infection.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/infection_scheme/treated_infection.pdf>]
+<images/eRT_0_alpha_0/untreated_T.pdf, id=87, 462.72874pt x 347.2975pt>
 File: images/eRT_0_alpha_0/untreated_T.pdf Graphic file (type pdf)
 <use images/eRT_0_alpha_0/untreated_T.pdf>
 Package pdftex.def Info: images/eRT_0_alpha_0/untreated_T.pdf  used on input line 214.
-(pdftex.def)             Requested size: 229.75896pt x 172.32011pt.
-<images/eRT_0_alpha_0/untreated_overview_V.pdf, id=94, 462.52798pt x 346.89601pt>
+(pdftex.def)             Requested size: 229.75896pt x 172.44537pt.
+<images/eRT_0_alpha_0/untreated_overview_V.pdf, id=88, 462.72874pt x 347.2975pt>
 File: images/eRT_0_alpha_0/untreated_overview_V.pdf Graphic file (type pdf)
 <use images/eRT_0_alpha_0/untreated_overview_V.pdf>
 Package pdftex.def Info: images/eRT_0_alpha_0/untreated_overview_V.pdf  used on input line 221.
-(pdftex.def)             Requested size: 229.75896pt x 172.32011pt.
-<images/eRT_04_alpha_02/treated_T.pdf, id=95, 462.52798pt x 346.89601pt>
+(pdftex.def)             Requested size: 229.75896pt x 172.44537pt.
+<images/eRT_04_alpha_02/treated_T.pdf, id=89, 462.72874pt x 347.2975pt>
 File: images/eRT_04_alpha_02/treated_T.pdf Graphic file (type pdf)
 <use images/eRT_04_alpha_02/treated_T.pdf>
 Package pdftex.def Info: images/eRT_04_alpha_02/treated_T.pdf  used on input line 247.
-(pdftex.def)             Requested size: 229.75896pt x 172.32011pt.
-<images/eRT_04_alpha_02/treated_overview_V.pdf, id=96, 462.52798pt x 346.89601pt>
+(pdftex.def)             Requested size: 229.75896pt x 172.44537pt.
+<images/eRT_04_alpha_02/treated_overview_V.pdf, id=90, 462.72874pt x 347.2975pt>
 File: images/eRT_04_alpha_02/treated_overview_V.pdf Graphic file (type pdf)
 <use images/eRT_04_alpha_02/treated_overview_V.pdf>
 Package pdftex.def Info: images/eRT_04_alpha_02/treated_overview_V.pdf  used on input line 254.
-(pdftex.def)             Requested size: 229.75896pt x 172.32011pt.
-<images/evolution_over_epsilon/treated_T.pdf, id=97, 462.52798pt x 346.89601pt>
+(pdftex.def)             Requested size: 229.75896pt x 172.44537pt.
+ [3] [4 </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf>]
+<images/evolution_over_epsilon/treated_T.pdf, id=194, 462.52798pt x 346.89601pt>
 File: images/evolution_over_epsilon/treated_T.pdf Graphic file (type pdf)
 <use images/evolution_over_epsilon/treated_T.pdf>
-Package pdftex.def Info: images/evolution_over_epsilon/treated_T.pdf  used on input line 305.
+Package pdftex.def Info: images/evolution_over_epsilon/treated_T.pdf  used on input line 306.
 (pdftex.def)             Requested size: 229.75896pt x 172.32011pt.
-<images/evolution_over_epsilon/treated_overview_V.pdf, id=98, 462.52798pt x 346.89601pt>
+<images/evolution_over_epsilon/treated_overview_V.pdf, id=195, 462.72874pt x 347.2975pt>
 File: images/evolution_over_epsilon/treated_overview_V.pdf Graphic file (type pdf)
 <use images/evolution_over_epsilon/treated_overview_V.pdf>
-Package pdftex.def Info: images/evolution_over_epsilon/treated_overview_V.pdf  used on input line 321.
-(pdftex.def)             Requested size: 229.75896pt x 172.32011pt.
- [5 </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf
-
-pdfTeX warning: pdflatex (file /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [6 </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf
-
-pdfTeX warning: pdflatex (file /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf
-
-pdfTeX warning: pdflatex (file /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf
-
-pdfTeX warning: pdflatex (file /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter3.tex) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter4.tex) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter5.tex) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter6.tex) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter7.tex) [7] (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.bbl) [8]
+Package pdftex.def Info: images/evolution_over_epsilon/treated_overview_V.pdf  used on input line 322.
+(pdftex.def)             Requested size: 229.75896pt x 172.44537pt.
+ [5 </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf> </Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf>]) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter3.tex) (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter4.tex [6] [7]) [8] (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.bbl) [9]
 \tf@thm=\write4
 \openout4 = `main.thm'.
 
  (/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.aux) ) 
 Here is how much of TeX's memory you used:
- 19741 strings out of 480608
- 370222 string characters out of 5903629
- 628733 words of memory out of 5000000
- 35211 multiletter control sequences out of 15000+600000
- 540824 words of font info for 56 fonts, out of 8000000 for 9000
+ 19721 strings out of 480608
+ 368913 string characters out of 5903629
+ 631739 words of memory out of 5000000
+ 35201 multiletter control sequences out of 15000+600000
+ 541444 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,16n,96p,553b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.pdf" (8 pages, 490006 bytes).
+ 68i,18n,96p,553b,588s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on "/Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.pdf" (9 pages, 602780 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
+ 329 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -236,18 +236,15 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter1.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter1.tex
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter2.tex
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter2.tex
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-32.def
-INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter2.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter2.tex
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/infection_scheme/untreated_infection.pdf
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/infection_scheme/untreated_infection.pdf
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/infection_scheme/untreated_infection.pdf
@@ -279,46 +276,45 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam1
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf
+INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_0_alpha_0/untreated_overview_V.pdf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/eRT_04_alpha_02/treated_overview_V.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_T.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf
+INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/images/evolution_over_epsilon/treated_overview_V.pdf
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter3.tex
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter3.tex
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter4.tex
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter4.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter5.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter5.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter6.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter6.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter7.tex
-INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/chapter/Chapter7.tex
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.bbl
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.bbl
 OUTPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.thm
 INPUT /Users/franziskariegger/Documents/ETH/09_Further/HIV and Inverse Theory/01_Tex Docs/Adaptive_Treatment_Strategy_HIV/main.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
@@ -335,3 +331,5 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
