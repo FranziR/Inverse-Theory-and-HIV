@@ -89,7 +89,7 @@ Such a model is shown in figure \ref{fig0b:scheme_treated}.\newline
 % % The RTIs reduce the infection rate of the virus while the effect of PIs first comes in after the infected cells bursted.
 % % A smaller number of released viral cells can participate in the next round of infection.\par
 
-According Rong et al. \cite{rong2007emergence}, the dynamics in figure \ref{fig0b:scheme_treated}, can be described by the following set 
+According to Rong et al. \cite{rong2007emergence}, the dynamics in figure \ref{fig0b:scheme_treated} can be described by the following set 
 of differential equations:
 
 \begin{align}
@@ -103,7 +103,7 @@ of differential equations:
     \label{equ:HIVmodel}
 \end{align}
 
-Here, $T(t)$ denotes the concentration of uninfected target T cells.
+Here, $T(t)$ denotes the concentration of uninfected target cells.
 Generally, by index $s$ we denote the drug-sensitive strain whereas index $r$ marks the drug-resistant one.
 % As discussed above, we are distiguishing between drug sensitive and resistant strains.
 Thus, $T_s(t)$ is the concentration of cells that are infected by drug-sensitive viral cells $V_s(t)$, whereas $T_r(t)$ is the concentration of cells that are infected by drug-resistant viral cells $V_r(t)$.
@@ -116,7 +116,7 @@ Further, $\lambda$ represents the birth rate of uninfected T cells per day, $\ga
 The constant rates $k_s$ and $k_r$ describe how fast uninfected cells are infected by drug-sensitive and resistant virus, respectively.
 At the same time, these rates are reduced by the use of RITs. The efficacy of the drug is given by the dimensionless 
 parameters $\varepsilon_{RT}^{s}$ and $\varepsilon_{RT}^{r}$, both ranging between 0 and 1.
-Since sensitive viruses are more susceptible to drugs, $\varepsilon_{RT}^{s} > \varepsilon_{RT}^{r}$.\newline
+Since sensitive viruses are more susceptible to drugs, $\varepsilon_{RT}^{s} > \varepsilon_{RT}^{r}$.
 We assume that both kinds of infected cells, $T_s(t)$ and $T_r(t)$, burst and consequently die at the same daily rate $\delta$.
 % During bursting, a certain number of free virus cells are released. 
 For sensitive virus cells, the number of released virus cells is denoted by $N_s$ 
@@ -138,15 +138,15 @@ Hence,
     \label{equ:epsilon_HAART}
 \end{align}
 
-Drug efficacy $\varepsilon_s$ only depends on the current therapy can directly be derived from drug dosages and intake durations.
+Drug efficacy $\varepsilon_s$ only depends on the current therapy and can directly be derived from drug dosages and intake durations.
 At the same time, we assume that the resistance level of the HIV mutants can be quantified by the parameter $\alpha\; (0 < \alpha < 1)$, 
 which represents the reduction in drug effectiveness by $\varepsilon_{RT}^s = \alpha \varepsilon_{RT}^r$ and $\varepsilon_{PI}^s = \alpha \varepsilon_{PI}^r$.
 Additionally, the rate at which $T_s(t)$ cells become drug-resistant during the process of replication is given by the parameter $u$ ($0 \leq u < 1$).
 In this chapter, we assume mild mutations, i.e. they appear rather seldomly and if they do, their susceptibility is only little reduced.
 Mathematically, this behaviour is achieved by setting $u = 3 \times 10^{-5}$ and $\alpha = 0.2$.
-With that, the efficacy parameters in relation \ref{equ:epsilon_HAART} are known and constant.\newline
-Opposed to that, the remaining parameters, summarized in $\vec{\theta} = \{\lambda, \gamma, k_s, k_r, N_s, N_r, \delta, c\}$, strongly depend on the patient.
-With the given information about the therapy, they can be estimated from blood measurements.
+With that, the constant efficacy parameters in relation \ref{equ:epsilon_HAART} are known.\newline
+Opposed to that, the remaining parameters, summarized in $\mathbf{m} = \{\lambda, \gamma, k_s, k_r, N_s, N_r, \delta, c\}$, strongly depend on the patient.
+However, with the given information about the therapy, they can be estimated from blood measurements.
 Descriptions and units of all parameters are summarized in table \ref{tab:init_parameters}.\par
 
 \renewcommand{\arraystretch}{1.25}
@@ -226,7 +226,7 @@ considered time interval.
     \caption[]{Simulation of the pretreatment evolution of an initial HIV infection.
     For the inital state, the following values are assumed: $T(0) = 10^{6} \, \text{ml}^{-1}$, $T_s(0) = 0 \, \text{ml}^{-1}$, 
     $T_r(0) = 0 \, \text{ml}^{-1}$, $V_s(0) = 10^{-6} \, \text{ml}^{-1}$ and $V_r(0) = 0 \, \text{ml}^{-1}$ \cite{perelson1993dynamics}.
-    Diagram (a) describes evolution of the uninfected CD4+ T cells during the first year.
+    Diagram (a) describes the evolution of the uninfected CD4+ T cells during the first year.
     After an inital break-in of $T(t)$, which is followed by oscillations, the immune cell concentration finally settles at a low level.
     At the same time, the total number of viral cells, i.e. $V_r(t) + V_s(t)$ increases.
     This behaviour is shown in figure (b), where the concentrations of the total viral load as well as its two strains $V_r(t)$ and $V_s(t)$, is plotted in a semi-logarithmic scale.
@@ -267,10 +267,11 @@ number of uninfected immune cells to rise again.
     Immune and viral cells are in a constant competition.
     Initially, therapy surpresses the reproduction of viral cells and hence, their concentration rapidly sinks.
     Consequently, more uninfected T cells are produces and $T(t)$ peaks in that first therapy phase.
-    At the same time, this increased number of potential host cells for the virus again fuels its replication, resulting in a growth of $V_r(t)$ and $V_s(t)$ increase again.
+    At the same time, this increased number of potential host cells for the virus again fuels its replication, resulting in a growth of $V_r(t)$ and $V_s(t)$.
     Figure (a) and (b) exhibit this interplay in form of oscillations. 
-    With time, this interaction settels at a constant level and the concentration of immune and viral cells remain roughly constant.
-    Further, figure (b) gives insight into the behaviour of the two viral strains. Since we are assuming mild mutations which occure seldomly, the concentration of the drug resistant virus is remarkably smaller than $V_s(t)$.}
+    With time, this interaction diminishes and the concentration of immune and viral cells remain roughly constant.
+    Further, figure (b) gives insight into the behaviour of the two viral strains. 
+    Since we are assuming mild mutations which occure seldomly which are still sensitive towards the drugs, the concentration of the drug resistant virus is remarkably smaller than $V_s(t)$.}
     \label{fig2:treated_eRT_04_alpha_02}
 \end{figure}
 
@@ -329,7 +330,7 @@ This finding emphasises the necessity to personalize the model.
     Diagram (a) depicts the evolution of the immune cells over increasing $\varepsilon_s$. 
     Diagram (b) shows the same for the concentration of the viral strains.
     Although, initially enhancing the medication leads to a sinking viral cell count and hence, to a growing CD4+ T concentration, this behaviour changes for a sufficiently high $\varepsilon_s$.
-    Above a certain threshold, the viremia is dominated by drug-resistant HIV cells. The patient does not longer respond to the therapy and her or his count of uninfcted immune cells remain constant under increasing $\varepsilon_s$.}
+    Above a certain threshold, the viremia is dominated by drug-resistant HIV cells. The patient does not longer respond to the therapy and her or his count of uninfcted immune cells remains constant under increasing $\varepsilon_s$.}
     \label{fig3:evolution_over_epsilon}
 \end{figure}
 

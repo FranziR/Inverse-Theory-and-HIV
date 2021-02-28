@@ -1,30 +1,66 @@
 \section{The Data}
 \label{sec:data}
 
-\begin{enumerate}
-    \item Numerical simulation of data: predefine a set of true parameters; simulate viral load over time (represent multiple blood tests)
-    \item Introducing statsistical errors: each measurement of viral load is taken in distinct intervals, i.e. assuming independent measurements
-\end{enumerate}
-
-% Whenever a patient starts a new drug treatment, the efficiency of the medication is assessed during a 3 months lasting preparatory phase.
-% Here, the patient is exposed to the drug in such a way that the doctor can artificially control the inhibition parameter $\gamma(t)$.
-% The load of viruses $V_{obs}(t)$, given in $cells/ml$, is measured in the blood plasma in a 2-weeks interval.
-% Note, that one wants to make as few blood plasma tests as possible since they are not only time consuming and expensive but also an additional physical and psychological burden for the patient.\\
-% From a mathematical point of view, it is $\mathbf{d_{obs}} \in \mathbb{R}^6$ with $d_{obs,i} = V_{obs}(t_i), i = [1,6]$.
-% Further, determining the exact amount of virus from blood plasma is not a trivial measurement.
-% The smallest variations in the sampled plasma volume or too long periods between plasma sampling and final analysis during which viruses can inhibit, are only two factors that potentially contaminate the data with errors.
-% In addition hereto, other aspects such as errors introduced by the laboratory tools, further reduce the reliability of the measurements.
-% Combining this with the fact, that the viral load can not be negative, allows to formulate the prior knowledge in terms of the following probability distribution:
-
-% \begin{align*}
-% p(\mathbf{d}_{obs}|\mathbf{m}) =
-%     \begin{cases}
-%         0 & \text{ if $V_{obs}(t_i) < 0, i = 1,...,6$}\\
-%         const\cdot e^{-\frac{1}{2}(\tilde{V}-V_{obs})^T C_{D}^{-1}(\tilde{V}-V_{obs})} & \text{else}
-%     \end{cases}
-% \end{align*}
-
-% As soon as one of the measurements is negative the probability density of the observation is set to 0.
-% Apart from this mutual dependency between the measurements, it is generally assumed that the observations are independently and identically distributed.
-% This is expressed by the \textit{data covariance matrix} $C_D$ whose only non-zero entries are the variances of each measurement $V_{obs}(t_i)$ on its diagonal (i.e. covariances between two measurements is 0).
-% It is assumed, that the standard deviation in each measurement is $\sigma_D = 250$.
+Previously, we have seen that the dynamics of a treated HIV infection is described by a set of nonlinear differential equations.
+Finding the most efficient HAART while minimizing its side-effects, requires a personalization of the model.
+This is achieved by estimating the parameters $\mathbf{m}$ from blood measurements.
+Their acquisition and expected inaccuracies is discussed in this section.\par
+Each new drug therapy is preceded by a preparatory phase during which the total viral cell concentration $V_{tot}(t) = V_r(t) + V_s(t)$ and the CD4+ T cell count $T_{tot}(t) = T(t) + T_r(t) + T_s(t)$ are recorded.
+In this 8 weeks lasting period, the patient can, obviously, not be left untreated. 
+She or he receives suboptimal therapy, reusing $\varepsilon_{RT}^s = 0.4$ and $\varepsilon_{PI}^s = 0.0$ from above.
+With $\alpha = 0.2$, it is $\varepsilon_{RT}^r = 0.08$ and $\varepsilon_{PI}^r = 0.0$.\\
+In the previous discussion, we have learned that the initial treatment phase is highly dynamic.
+Hence, the measurement schedule has to be designed such that the examinitions are carried out at intervalls, close enough to track these oscillations.
+At the same time, one wants to make as few blood plasma tests as possible since they are not only time consuming and expensive but also an additional physical and psychological burden for the patient.
+A good balance is, a one-week interval where once a week, two blood plasma samples are taken.
+One is used to determine $T_{tot}(t)$, the other for $V_{tot}(t)$.\newline
+However, determining the exact amount of virus and immune cells from blood plasma is not trivial.
+The smallest variations in the sampled plasma volume or too long periods between plasma sampling and final analysis during which viruses can inhibit, are only two factors that potentially contaminate the data with errors.
+In addition hereto, other aspects such as errors introduced by the laboratory tools, further reduce the reliability of the measurements.
+Having this in mind, we can interpret the final $8$-dimensional observation vectors $\mathbf{T}_{obs} \in \mathbb{R}^8$ and $\mathbf{V}_{obs} \in \mathbb{R}^8$ with $\mathbf{T}_{obs,i} = T_{obs}(t_i)$ and $\mathbf{V}_{obs,i} = V_{obs}(t_i)$, respectively, and for $i \in [0,7]$, as realizations of random variables.
+Their statistics are described in terms of the following conditional distributions
+\begin{align}
+    p(\mathbf{T}_{obs}|\mathbf{m}) = 
+    \begin{cases}
+        0 \quad & T_{obs}(t_i) < 0\\
+        \mathcal{N}(\mathbf{T}_{tot}, C_{D_T}) \; & \text{else}
+    \end{cases} \quad\quad ,i \in [0,7]
+    \label{equ:prior_D_T}
+\end{align}
+\begin{align}
+    p(\mathbf{V}_{obs}|\mathbf{m}) = 
+    \begin{cases}
+        0 \quad & V_{obs}(t_i) < 0\\
+        \mathcal{N}(\mathbf{V}_{tot}, C_{D_V}) \; & \text{else}
+    \end{cases} \quad\quad ,i \in [0,7]
+    \label{equ:prior_D_V}
+\end{align}
+which encode the prior knowledge that we have about the measurements.
+Firstly, negative cell concentrations are unrealistic and hence, their probability is set to 0.
+For positive values, we assume that the measurement errors are distributed normally with mean $\mathbf{T}_{tot}(\mathbf{m}) = [T_{tot}(t_0,\mathbf{m}),\dots,T_{tot}(t_7,\mathbf{m})]^T$ and $\mathbf{V}_{tot}(\mathbf{m}) = [V_{tot}(t_0,\mathbf{m}),\dots,V_{tot}(t_7,\mathbf{m})]^T$, respectively.
+Since single samples are independent of each other, the covariance matrices $C_{D_T}$ and $C_{D_V}$, have only non-zero diagonal entries.
+These are the variances in each measurement and describe the observational uncertainty that we have about the value.
+Determining viral cells in blood plasma is significantly more challenging that tracking the body's own immune cells.
+This difference is included in the probability distributions by setting $C_{{D_V},jj} > C_{{D_T},jj}$, $j \in [0,7]$. 
+We choose $C_{{D_T},jj} = 200$ and $C_{{D_V},jj} = 250$.\\
+Statistics \ref{equ:prior_D_T} and \ref{equ:prior_D_V} can further be summarized to describe the joint distribution over all observations, i.e. $p(\mathbf{d}_{obs}|\mathbf{m})$ with $\mathbf{d}_{obs} = \{\mathbf{T}_{obs},\mathbf{V}_{obs}\}$.
+Since $\mathbf{T}_{obs}$ and $\mathbf{V}_{obs}$ are derived from independent samples, their joint distribution simplifies to
+\begin{align}
+        p(\mathbf{d}_{obs}|\mathbf{m})
+        = p(\mathbf{T}_{obs},\mathbf{V}_{obs}|\mathbf{m}) 
+        = p(\mathbf{T}_{obs}|\mathbf{m})p(\mathbf{V}_{obs}|\mathbf{m}) 
+        = \frac{1}{4\pi^2 \sqrt{|C_{D_T}||C_{D_V}|}}e^{\mathbf{\chi}(\mathbf{m})}
+    \label{equ:prior_D}
+\end{align}
+where $|\cdot|$ is the determinat of a matrix and
+\begin{align}
+    \begin{split}
+        \mathbf{\chi}(\mathbf{m}) = -\frac{1}{2}&\bigr((\mathbf{T}_{obs} - \mathbf{T}_{tot}(\mathbf{m}))^T C_{D_T}^{-1}(\mathbf{T}_{obs} - \mathbf{T}_{tot}(\mathbf{m})) 
+        \\&+ (\mathbf{V}_{obs} - \mathbf{V}_{tot}(\mathbf{m}))^T C_{D_V}^{-1}(\mathbf{V}_{obs} - \mathbf{V}_{tot}(\mathbf{m}))\bigl).
+    \end{split}
+    \label{equ:prior_D_exp}
+\end{align}
+Since we do not have access to real data, we work with artifical data instead.
+For this, we simulate the means $T_{tot}(t_i)$ and $V_{tot}(t_i)$ by solving the forward model \ref{equ:HIVmodel} at times $t_i \in \{7i|i \in [0,7]\}$.
+Note, that to synthesize the data, we have to predefine the set of true parameters $\mathbf{m}_{true}$.
+In the following, we assume that the earlier used values, listed in table \ref{tab:init_parameters}, are the true parameters which we want to recover from blood measurements.

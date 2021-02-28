@@ -1,51 +1,84 @@
 \section{The Methods}
 \label{sec:methods}
 
+After discussing the acquistion of blood measurement data, this section is devoted to consider the model parameters, the inverse problem itself and finally appropriate solution methods in more detail.
 
-% After introducing the data side of the problem, this chapter is devoted to consider the model parameters, the inverse problem itself and finally appropriate solution methods in more detail.\\
-% First of all, the aim is to find the model parameter $\mathbf{m} = (c, \rho, k, N, \lambda) \in \mathbb{R}^6$ which best explain the measured viral load $\mathbf{d}_{obs}$.
-% Generally, the exact values of the parameters are unknown and therefore, are modelled by probability distributions.
-% In doing so, the following prior knowledge can be incorporated.
-% Due to extensive, preceding clinical tests on other HIV patients as well as on animals, the rough order of magnitude of the parameters is known.
-% These prior values are assumed to be the means around which the parameters symmetrically deviate with a certain variance.
-% It is $E[\mathbf{m}] = (13, 0.01, 8\cdot 10^{-7}, 100, 10 000)^T$ \cite{ADAMS200510} and $Var[\mathbf{m}] = (2, 0.001, 1\cdot 10^{-8}, 3, 300)^T$.
-% Further note, that the model parameters are independent of each other and consequently uncorrelated.
-% Further, from basic physics and biology it can be inferred that the model parameters are always non-negative.
-% Summarizing these constraints, the prior knowledge about the model parameters is represented by a multi-variant gamma distribution $\mathbf{m} \sim p(\mathbf{m}) = \Gamma (\mathbf{k_{\gamma}}, \mathbf{\theta_{\gamma}})$.
-% Its inherent advantage is, that is does not accept negative model parameters.
-% Note, that the shape parameters $k_{\gamma}$ and the scaling parameters $\theta_{\gamma}$ of the distributions have to be subjectively chosen for each parameter of $\mathbf{m}$ such that the distribution is symmetric around the given mean of each model parameter.\\ \\
-% After representing the prior knowledge in form of probability distributions, the next step can be taken and the inverse problem itself is considered.
-% First of all, the problem with its six unknown model parameters and the six observations is even-determined.
-% In chapter \ref{sec:Data}, it has been mentioned that \textit{as few as possible} blood plasma test should be conducted.
-% Here, the minimal number is set by the necessity to generate at least as many observations as unknown parameters in order to avoid an over- or under-determined problem.\\
-% Following this, the inverse problem has to be formulated.
-% Generally, there are three possibilities namely defining the inversion as an optimization problem, a deterministic least-squares problem or a Bayesian inverse problem.
-% The first option is based on approximating a problem-dependent misfit function. This approach is appropriate for a weakly non-linear forward problem.
-% Opposed to that, a deterministic least-square problem solves the root-mean square misfit function for a linear forward model.
-% Since this includes the inversion of possibly singular matrices, one has to incorporate prior knowledge as well as regularization techniques (equivalent to include artificial prior knowledge). 
-% Last but not least, a Bayesian inverse problem derives the a posterior model distribution $p(\mathbf{m}|\mathbf{d}_{obs})$ from the prior distributions in model and data space with Bayes theorem.
-% Following this, computationally expensive Monte Carlos Methods are used to sample from the posterior distribution since the latter is generally not given explicitly.
-% The finally selected model is then for instance the \textit{maximum a posterior model} $\mathbf{m}_{MAP}$.
-% In a special case, where the forward model is linear and both prior distributions are Gaussian, the probabilistic approach of Bayes can be formulated as a least-squares problem and the posterior distribution can be defined explicitly.\\
-% However, the fact that the forward model for the HIV dynamics is non-linear and none of the prior distributions is purely Gaussian, directly excludes the least-square approach.
-% Further, one could either choose to linearize the forward model and define the problem as an optimization or to formulate it as a Bayes inverse problem.
-% An often mentioned disadvantages of the latter is, that sampling from a distribution with Monte Carlo Methods is computationally expensive.
-% Apart from that, Bayes approach has no inherent limitation and even has the strong advantage to directly include an uncertainty quantification since the likelihood is directly attached to each model as a measure of plausibility.\\
-% Hence, despite the high computational intensity it is reasonable to formulate the problem as a Bayes inversion.
-% It is 
+\subsection{Probabilistic Formulation of Prior Knowledge and Bayes' Theorem}
 
-% \begin{align}
-%     p(\mathbf{m}|\mathbf{d}_{obs}) = \frac{p(\mathbf{d}_{obs}|\mathbf{m})p(\mathbf{m})}{p(\mathbf{d}_{obs})} \quad .
-% \end{align}
+First of all, the aim is to find the model parameters $\mathbf{m} = \{\lambda, \gamma, k_s, k_r, N_s, N_r, \delta, c\} \in \mathbb{R}^8$ which best explain the measured cell loads $\mathbf{d}_{obs} = \{\mathbf{T}_{obs},\mathbf{V}_{obs}\}$.
+Generally, the exact values of the parameters are unknown and therefore, are modelled by probability distributions.
+In doing so, the following prior knowledge can be incorporated.
+Firstly, from basic physics and biology it can be inferred that the model parameters are always non-negative.
+Secondly, due to extensive, preceding clinical tests on other HIV patients as well as on animals, the rough order of magnitude of the parameters is known.
+These prior values are assumed to be the means around which the parameters deviate with a certain variance.
+Perelson et al. \cite{perelson1993}, for instance, derive from the infection dynamics that it is reasonable to assume that $k_s$ is uniformly distributed over the interval $(1.2\times 10^{-8}, 3.6\times 10^{-8})\;\text{ml day}^{-1}$.
+Similar behaviour can be suggested for the drug-resistant population and $k_r \sim \mathcal{U}(1.0\times 10^{-8}, 3.0\times 10^{-8})\;\text{ml day}^{-1}$. 
+Further, the numbers $N_s$ and $N_r$ of viruses that infected CD4+ T cells release after bursting, are again distributed uniformly over $(2000,4000)$ and $(1000,3000)$, respectively.\newline
+As Rong et al. \cite{rong2007emergence} before, we model the remaining $4$ parameters as random variables with an asymmetric triangular distribution.
+The latter is defined by three values $(lb,p,ub)$ where $lb$ and $ub$ are lower and upper bound, respectively, and $p$ is the peak value.
+For a random variable $x$, this statistic is defined as
+\begin{align}
+    x \sim \mathcal{T}(lb,p,ub) = 
+    \begin{cases}
+        \frac{2(x-lb)}{(ub-lb)(p-lb)}&,\; lb \leq x \leq p\\ 
+        \frac{2(ub-x)}{(ub-lb)(ub-p)}&,\; p < x \leq ub\\
+        0 \;&, x < lb \text{ and } ub < x\\
+    \end{cases}
+    \label{equ:asy_tri_distribution}
+\end{align}
+With that, the death rate $\gamma$ of uninfected immune cells is drawn from $\mathcal{T}(0.005, 0.01, 0.016)\;\text{day}^{-1}$.
+% The first value describes the lower value, $0.01\text{ day}^{-1}$ is the peak value and the last one sets an upper bound.
+In \cite{rong2007emergence} it is further stated, that the immune cell birth rate $\lambda$ is a $T(0)$ multiple of $\gamma$.
+Hence, following the discussion from the previous section and using $T(0) = 3.19\times 10^5 \text{ ml}^{-1}$, it is $\lambda \sim \mathcal{T}(1.595, 3.19, 5.104)\times 10^4\;\text{ml}^{-1}\;\text{day}^{-1}$.
+The viral clearnace rate $c$ is sampled from another asymmetric traingular distribution with lower and upper bounds $9.1 \text{ day}^{-1}$ and $36 \text{ day}^{-1}$, respectively, and peak $23 \text{ day}^{-1}$.
+Finally, the death rate $\delta$ of infected cells is drawn from $\mathcal{T}(0.25,1,1.5)\;\text{day}^{-1}$.\newline
+Summarizing the information about the single and mutually independent model parameters, their joint probability distribution takes the form
+\begin{align}
+    p(\mathbf{m}) = p(\lambda)p(\gamma)p(k_s)p(k_r)p(N_s)p(N_r)p(\delta)p(c).
+    \label{equ:prior_M}
+\end{align}
+After representing the prior knowledge in data and model space in form of probability distributions, the next step can be taken and the inverse problem itself is considered.
+First of all, the problem, with its eight unknown model parameters $\mathbf{m} \in \mathbb{R}^8$, and the eight observations $\mathbf{d}_{obs} \in \mathbb{R}^8$ is even-determined.
+In section \ref{sec:data}, it has been mentioned that \textit{as few as possible} blood plasma test should be conducted.
+Here, the minimal number is set by the necessity to generate at least as many observations as unknown parameters in order to avoid an over- or under-determined problem.\\
+Following this, the inverse problem has to be formulated.
+Generally, there are three possibilities namely defining the inversion as an optimization problem, a deterministic least-squares problem or a Bayesian inverse problem.
+The first option is based on approximating a problem-dependent misfit function. This approach is appropriate for a weakly non-linear forward problem.
+Opposed to that, a deterministic least-square problem solves the root-mean square misfit function for a linear forward model.
+Since this includes the inversion of possibly singular matrices, one has to incorporate prior knowledge as well as regularization techniques (equivalent to include artificial prior knowledge). 
+Last but not least, a Bayesian inverse problem derives the a posterior model distribution $p(\mathbf{m}|\mathbf{d}_{obs})$ from the prior distributions in model and data space with Bayes theorem.
+Following this, computationally expensive Monte Carlos Methods are used to sample from the posterior distribution since the latter is generally not given explicitly.
+The finally selected model is then for instance the \textit{maximum a posterior model} $\mathbf{m}_{MAP}$.
+In a special case, where the forward model is linear and both prior distributions are Gaussian, the probabilistic approach of Bayes can be formulated as a least-squares problem and the posterior distribution can be defined explicitly.\\
+However, the fact that the forward model for the HIV dynamics is non-linear and none of the prior distributions is purely Gaussian, directly excludes the least-square approach.
+Further, one could either choose to linearize the forward model and define the problem as an optimization or to formulate it as a Bayes inverse problem.
+An often mentioned disadvantages of the latter is, that sampling from a distribution with Monte Carlo Methods is computationally expensive.
+Apart from that, Bayes approach has no inherent limitation and even has the strong advantage to directly include an uncertainty quantification since the likelihood is directly attached to each model as a measure of plausibility.\\
+Hence, despite the high computational cost, it is reasonable to formulate the problem as a Bayes inversion.
+It is 
 
-% As mentioned above, in most cases the posterior model distribution $p(\mathbf{m}|\mathbf{d}_{obs})$ can not be computed analytically and hence Bayes approach has to be equipped with an algorithm to sample from it.
-% A very simple choice would by the a systematic grid search in the model space.
-% However, since it heavily suffers from the curse of dimensionality Monte Carlo Methods (MCM) are more appropriate.
-% These are random search algorithms which try to avoid regions in the model space that are less relevant by taking the prior knowledge into account.
-% A special MCM algorithm is the so-called Simulated Annealing (SA).
-% Based on the Metropolis-Hasting acceptance rule, it samples from a modified posterior probability distribution $p_T(\mathbf{m}|\mathbf{d}_{obs})$.
-% Due to this modification of the distribution, the algorithm starts sampling from a very broad $p_T(\mathbf{m}|\mathbf{d}_{obs})$.
-% In the course of the SA sampling, the peaks of the modified distribution become more and more distinct.
-% For a sufficiently slow transition from the broad $p_T(\mathbf{m}|\mathbf{d}_{obs})$ to the distinct one, convergence towards the global maximum-likelihood model is guaranteed.\\
-% Hence, the solution of the inverse problem is automatically the maximum likelihood model $\mathbf{m}_{MAP}$.
-% As mentioned earlier, Bayes approach does not require any additional uncertainty assessment.
+\begin{align}
+    p(\mathbf{m}|\mathbf{d}_{obs}) = \frac{p(\mathbf{d}_{obs}|\mathbf{m})p(\mathbf{m})}{p(\mathbf{d}_{obs})} \quad .
+\end{align}
+
+where we aim on copmuting the maximum likelihood estimation of $p(\mathbf{m}|\mathbf{d}_{obs})$.
+
+\subsection{Sampling with Markov Chain Monte Carlo Method}
+
+As mentioned above, in most cases the posterior model distribution $p(\mathbf{m}|\mathbf{d}_{obs})$ can not be computed analytically and hence, Bayes approach has to be equipped with an algorithm to sample from it.
+A very simple choice would be a systematic grid search in the model space.
+However, since it heavily suffers from the curse of dimensionality, Monte Carlo Methods (MCM) are more appropriate.
+Generally speaking, these methods are capable of numerically solving a broad class of computational problems by repeated random sampling.
+Here, we use MCM to compute samples of the model posterior distribution.
+For this, a Markov Chain is constructed whose equilibrium distribution equals $p(\mathbf{m}|\mathbf{d}_{obs})$.
+The arising class of algorithms are called Markov Chain Monte Carlo (MCMC) methods.
+While simple grid searches deterministically scan through the complete model space, MCMC perform random searches.
+They try to avoid regions in the search space that are less relevant than other.
+Meaningful models are identified by taking the prior knowledge into account.\newline
+A special MCMC algorithm is the so-called Simulated Annealing (SA).
+Based on the Metropolis-Hasting acceptance rule, it samples from a modified posterior probability distribution $p_T(\mathbf{m}|\mathbf{d}_{obs})$.
+Due to this modification of the distribution, the algorithm starts sampling from a very broad $p_T(\mathbf{m}|\mathbf{d}_{obs})$.
+In the course of the SA sampling, the peaks of the modified distribution become more and more distinct.
+For a sufficiently slow transition from the broad $p_T(\mathbf{m}|\mathbf{d}_{obs})$ to the distinct one, convergence towards the global maximum-likelihood model is guaranteed.\\
+Hence, the solution of the inverse problem is automatically the maximum likelihood model $\mathbf{m}_{MAP}$.
+As mentioned earlier, Bayes approach does not require any additional uncertainty assessment.
